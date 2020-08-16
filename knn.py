@@ -19,9 +19,8 @@ def home():
 
 @knn.route('/process', methods=['POST'])
 def process():
-     
-    data_source_url = "https://raw.githubusercontent.com/kolaveridi/kaggle-Twitter-US-Airline-Sentiment-/master/Tweets.csv"
-    airline_tweets = pd.read_csv(data_source_url)
+    
+    airline_tweets = pd.read_csv('airline_tweets.csv')
     
 
     features = airline_tweets.iloc[:, 10].values
